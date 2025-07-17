@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 // import 'package:time/view/utils/app_images/app_images.dart';
 
+import '../../screen/favourite/favourite_screen.dart';
 import '../../screen/home/home_screen.dart';
 import '../../screen/splash_screen.dart';
 import '../../utils/app_colors/app_colors.dart';
@@ -24,8 +25,8 @@ class _UserNavBarState extends State<NavBar> {
   late int bottomNavIndex;
   final List<String> navbarNameList = [
     "home",
-    "message",
-    "schedule",
+    "favourite",
+    "profile",
   ];
   final List<String> selectedIcon = [
     AppImages.home,
@@ -107,9 +108,9 @@ class _UserNavBarState extends State<NavBar> {
         case 0:
           Get.offAll(() => HomeScreen());
           break;
-        // case 1:
-        //  Get.to(() => ClassNineScreen());
-        //   break;
+        case 1:
+         Get.to(() => FavouriteScreen());
+          break;
         // case 2:
         //  Get.to(() => GameScreen());
         //   break;
